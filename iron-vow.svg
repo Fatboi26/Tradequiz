@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Iron Vow - Medieval knight wearing PPE and holding a chisel">
+  <title>Iron Vow - Medieval knight wearing PPE and holding a chisel</title>
+  <defs>
+    <linearGradient id="bg11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b5891f"/><stop offset="1" stop-color="#e6bb4a"/>
+    </linearGradient>
+    <clipPath id="clip11"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip11)">
+    <rect width="200" height="200" fill="url(#bg11)"/>
+    <circle cx="100" cy="196" r="86" fill="rgba(255,255,255,.10)"/>
+    <!-- torso / hi-vis vest with reflective banding -->
+    <path d="M46 200v-24c0-20 16-34 36-38h36c20 4 36 18 36 38v24z" fill="#c9f24a"/>
+    <path d="M74 142l10 58h-9l-9-52z" fill="#eef3f6" opacity=".9"/>
+    <path d="M126 142l-10 58h9l9-52z" fill="#eef3f6" opacity=".9"/>
+    <rect x="46" y="176" width="108" height="8" fill="#eef3f6" opacity=".85"/>
+    <!-- neck + head -->
+    <rect x="88" y="112" width="24" height="28" rx="8" fill="#c98a5e"/>
+    <rect x="66" y="60" width="68" height="76" rx="30" fill="#c98a5e"/>
+    <!-- eyes (hidden under sealed helmets) -->
+    
+    <!-- headgear -->
+    <path d="M62 80c0-23 17-40 38-40s38 17 38 40v18H62z" fill="#b8c3cb"/><rect x="66" y="82" width="68" height="12" rx="4" fill="#2b2f33"/><rect x="96" y="60" width="8" height="42" fill="#2b2f33" opacity=".55"/><path d="M92 26h16l-4 16h-8z" fill="#d1352b"/>
+    <!-- tool -->
+    <g transform="translate(124,84) rotate(14) scale(0.86)"><rect x="27" y="26" width="7" height="26" rx="3" fill="#7a4a22"/><path d="M28 8h5v18h-5z" fill="#c2ccd4"/><path d="M28 4h5l-2.5 4z" fill="#8d99a3"/></g>
+    <!-- glove holding tool -->
+    <path d="M138 128c14-4 26 4 28 18l-24 6z" fill="#c9f24a" opacity=".95"/>
+    <circle cx="146" cy="140" r="14" fill="#2b2f33"/>
+  </g>
+  <circle cx="100" cy="100" r="98" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="4"/>
+</svg>

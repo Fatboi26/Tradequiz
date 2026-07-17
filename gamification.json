@@ -1,0 +1,63 @@
+{
+  "_comment": "XP curve, levels, badges and streak rules. Safe to edit — no code changes needed.",
+
+  "xp": {
+    "perCorrect": 10,
+    "speedBonusMax": 10,
+    "streakStep": 2,
+    "streakCapBonus": 20,
+    "perfectRoundBonus": 50,
+    "quizCompleteBonus": 25,
+    "bonusQuestionMultiplier": 2
+  },
+
+  "levels": {
+    "_comment": "XP required to REACH each level. Level = highest threshold passed.",
+    "curve": "quadratic",
+    "base": 120,
+    "growth": 1.25,
+    "maxLevel": 60,
+    "titles": {
+      "1": "Trainee",
+      "5": "Apprentice",
+      "10": "Improver",
+      "16": "Advanced Apprentice",
+      "24": "Craftsperson",
+      "34": "Site Supervisor",
+      "45": "Master Tradesperson",
+      "55": "Legend of the Toolbox"
+    }
+  },
+
+  "scoring": {
+    "basePoints": 1000,
+    "speedWeight": 0.5,
+    "streakBonusPerStep": 100,
+    "streakBonusCap": 500,
+    "perfectRoundBonus": 2000
+  },
+
+  "streaks": {
+    "dailyResetHours": 36,
+    "milestones": [3, 5, 7, 14, 30]
+  },
+
+  "badges": [
+    { "id": "first-steps",          "name": "First Steps",            "icon": "\ud83d\udc63", "desc": "Complete your first quiz.",                        "rule": { "type": "quizzesCompleted", "value": 1 } },
+    { "id": "quick-draw",           "name": "Quick Draw",             "icon": "\u26a1", "desc": "Answer 10 questions correctly in under 5 seconds each.", "rule": { "type": "fastCorrect", "value": 10 } },
+    { "id": "flawless",             "name": "Flawless",               "icon": "\ud83d\udc8e", "desc": "Score 100% on any quiz.",                          "rule": { "type": "perfectQuiz", "value": 1 } },
+    { "id": "on-a-roll",            "name": "On a Roll",              "icon": "\ud83d\udd25", "desc": "Hit a 10-answer streak.",                          "rule": { "type": "bestStreak", "value": 10 } },
+    { "id": "regular",              "name": "Regular",                "icon": "\ud83d\udcc5", "desc": "Practise 5 days in a row.",                        "rule": { "type": "dayStreak", "value": 5 } },
+    { "id": "plumbing-apprentice",  "name": "Plumbing Apprentice",    "icon": "\ud83e\udea0", "desc": "Earn 500 XP in Plumbing.",                        "rule": { "type": "subjectXp", "subject": "plumbing", "value": 500 } },
+    { "id": "electrical-improver",  "name": "Electrical Improver",    "icon": "\u26a1", "desc": "Earn 500 XP in Electrical Installation.",              "rule": { "type": "subjectXp", "subject": "electrical", "value": 500 } },
+    { "id": "carpentry-craftsperson","name": "Carpentry Craftsperson","icon": "\ud83e\ude9a", "desc": "Earn 500 XP in Carpentry.",                       "rule": { "type": "subjectXp", "subject": "carpentry", "value": 500 } },
+    { "id": "construction-operative","name": "Construction Operative","icon": "\ud83c\udfd7\ufe0f", "desc": "Earn 500 XP in Construction.",              "rule": { "type": "subjectXp", "subject": "construction", "value": 500 } },
+    { "id": "health-safety-champion","name": "Health & Safety Champion","icon": "\ud83e\uddba", "desc": "Earn 500 XP in Health & Safety.",              "rule": { "type": "subjectXp", "subject": "health-safety", "value": 500 } },
+    { "id": "numerate",             "name": "Numerate",               "icon": "\ud83d\udcd0", "desc": "Earn 300 XP in Maths.",                           "rule": { "type": "subjectXp", "subject": "maths", "value": 300 } },
+    { "id": "wordsmith",            "name": "Wordsmith",              "icon": "\ud83d\udcda", "desc": "Earn 300 XP in English.",                         "rule": { "type": "subjectXp", "subject": "english", "value": 300 } },
+    { "id": "survivor",             "name": "Survivor",               "icon": "\ud83d\udee1\ufe0f", "desc": "Reach 15 questions in Survival Mode.",       "rule": { "type": "survivalRun", "value": 15 } },
+    { "id": "clock-beater",         "name": "Clock Beater",           "icon": "\u23f1\ufe0f", "desc": "Score 15+ in a Time Attack round.",              "rule": { "type": "timeAttackScore", "value": 15 } },
+    { "id": "grafter",              "name": "Grafter",                "icon": "\ud83d\udcaa", "desc": "Complete 25 quizzes.",                            "rule": { "type": "quizzesCompleted", "value": 25 } },
+    { "id": "master-tradesperson",  "name": "Master Tradesperson",    "icon": "\ud83c\udfc6", "desc": "Earn the badge for all five trade subjects.",     "rule": { "type": "badgeSet", "value": ["plumbing-apprentice","electrical-improver","carpentry-craftsperson","construction-operative","health-safety-champion"] } }
+  ]
+}

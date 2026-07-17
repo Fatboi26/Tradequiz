@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "subject": { "id": "carpentry", "name": "Carpentry & Joinery", "icon": "🪚", "color": "#8B5A2B",
+    "description": "Timber joints, fixings, hand and power tools, setting out." },
+  "topics": [
+    { "id": "joints", "name": "Timber Joints" },
+    { "id": "fixings", "name": "Fixings & Fasteners" },
+    { "id": "tools", "name": "Tools & Machinery" },
+    { "id": "setting-out", "name": "Setting Out" }
+  ],
+  "quizzes": [
+    {
+      "id": "car-joints-01",
+      "title": "Timber Joints",
+      "topic": "joints", "level": "Level 2",
+      "description": "Name the joint and know where it belongs.",
+      "tags": ["timber-joints", "drag-and-drop-assembly"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "j1", "type": "match", "text": "Match each joint to its typical application.", "time": 50,
+          "pairs": [
+            { "left": "Mortise and tenon", "right": "Door and window frame corners" },
+            { "left": "Dovetail", "right": "Drawer sides — resists being pulled apart" },
+            { "left": "Housing (dado)", "right": "Shelf into a bookcase side" },
+            { "left": "Halving joint", "right": "Two rails crossing in the same plane" },
+            { "left": "Scarf joint", "right": "Lengthening a structural timber" }
+          ],
+          "explain": "The dovetail's angled pins mechanically resist tension — that is why drawer fronts use them." },
+        { "id": "j2", "type": "mcq", "text": "In a mortise and tenon, what is the traditional proportion of tenon thickness to timber thickness?", "time": 25,
+          "options": ["One half", "One third", "One quarter", "Two thirds"], "answer": 1,
+          "explain": "One third keeps the tenon strong while leaving enough cheek either side of the mortise." },
+        { "id": "j3", "type": "order", "text": "Order the steps for cutting a through mortise and tenon by hand.", "time": 60,
+          "items": ["Mark the face side and face edge on both members", "Set the mortise gauge to the chisel width and mark both pieces", "Cut the mortise with a mortise chisel, working from both faces", "Saw the tenon cheeks down to the shoulder line", "Saw the shoulders", "Test fit and pare to a snug fit", "Glue, cramp and check for square"],
+          "explain": "Gauge from the face side and face edge every time, or the joint will wind." },
+        { "id": "j4", "type": "truefalse", "text": "A bridle joint is essentially the reverse of a mortise and tenon.", "time": 20, "answer": true,
+          "explain": "The bridle cuts an open slot instead of an enclosed mortise — easier to cut, but weaker in racking." }
+      ]
+    },
+    {
+      "id": "car-fixings-01",
+      "title": "Fixings, Fasteners & Power Tool Safety",
+      "topic": "fixings", "level": "Level 1",
+      "description": "The right fixing for the substrate, and staying safe with the tools.",
+      "tags": ["fixings-and-fasteners", "power-tool-safety"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "x1", "type": "match", "text": "Match each fixing to the correct substrate.", "time": 45,
+          "pairs": [
+            { "left": "Plasterboard spring toggle", "right": "Hollow stud wall, heavy load" },
+            { "left": "Nylon wall plug and screw", "right": "Solid brick or block" },
+            { "left": "Coach screw", "right": "Heavy timber-to-timber connections" },
+            { "left": "Resin anchor", "right": "Cracked or perforated masonry under high load" }
+          ],
+          "explain": "Never use a nylon plug in plasterboard — it will pull straight through." },
+        { "id": "x2", "type": "mcq", "text": "Which voltage tool is standard on many UK construction sites for reduced electric shock risk?", "time": 20,
+          "options": ["230 V", "110 V centre-tapped earth", "400 V", "24 V"], "answer": 1,
+          "explain": "110 V CTE means a maximum of 55 V to earth — survivable where 230 V often is not. Yellow plugs and transformers." },
+        { "id": "x3", "type": "multi", "text": "Select ALL correct practices when using a circular saw.", "time": 35,
+          "options": ["Let the blade reach full speed before entering the cut", "Remove the lower guard for a better view", "Check the blade is sharp and correctly fitted", "Support the workpiece so the offcut cannot pinch the blade", "Carry the saw by its trigger", "Unplug before changing the blade"],
+          "answer": [0, 2, 3, 5],
+          "explain": "Removing the guard and carrying by the trigger are how people lose fingers. Pinching causes kickback." },
+        { "id": "x4", "type": "mcq", "text": "What causes kickback on a circular saw?", "time": 25,
+          "options": ["A blunt blade only", "The blade binding or pinching in the cut, throwing the saw back at the operator", "Cutting too slowly", "Using a blade with too many teeth"], "answer": 1,
+          "explain": "A riving knife keeps the kerf open behind the blade specifically to prevent this." },
+        { "id": "x5", "type": "numeric", "text": "A stud wall is 4.8 m long with studs at 400 mm centres, plus a stud at each end. How many studs are needed?", "time": 45,
+          "answer": 13, "tolerance": 0, "unit": "studs", "bonus": true,
+          "explain": "4800 ÷ 400 = 12 spaces, and spaces + 1 = 13 studs. The classic 'fence post' error is answering 12." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "subject": { "id": "maths", "name": "Maths", "icon": "📐", "color": "#2C5FA8",
+    "description": "Functional maths in a trade context — areas, volumes, ratios and percentages." },
+  "topics": [
+    { "id": "area-volume", "name": "Area & Volume" },
+    { "id": "ratio", "name": "Ratio & Percentage" },
+    { "id": "formulae", "name": "Formulae" }
+  ],
+  "quizzes": [
+    {
+      "id": "mat-trade-01",
+      "title": "Trade Maths Workout",
+      "topic": "area-volume", "level": "Level 2",
+      "description": "The sums you actually do on site.",
+      "tags": ["calculations", "measuring-exercises"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "m1", "type": "numeric", "text": "A cylinder is 1.5 m tall with an internal diameter of 450 mm. What is its capacity in litres? (Nearest litre.)", "time": 75,
+          "answer": 239, "tolerance": 2, "unit": "litres",
+          "explain": "V = πr²h = π × 0.225² × 1.5 = 0.2386 m³. 1 m³ = 1000 litres → 239 litres." },
+        { "id": "m2", "type": "numeric", "text": "Mortar is mixed 1:5 cement to sand. How many kg of cement are in 300 kg of mix?", "time": 60,
+          "answer": 50, "tolerance": 0, "unit": "kg",
+          "explain": "1:5 means 6 parts total. 300 ÷ 6 = 50 kg cement, 250 kg sand." },
+        { "id": "m3", "type": "numeric", "text": "A job is quoted at £840 plus VAT at 20%. What is the total?", "time": 45,
+          "answer": 1008, "tolerance": 0, "unit": "£",
+          "explain": "840 × 1.20 = £1008." },
+        { "id": "m4", "type": "mcq", "text": "Convert 0.075 m³ into litres.", "time": 30,
+          "options": ["7.5 litres", "75 litres", "750 litres", "0.75 litres"], "answer": 1,
+          "explain": "× 1000. This conversion catches people out constantly on cylinder sizing." },
+        { "id": "m5", "type": "numeric", "text": "A pipe run rises 1 in 40 over 12 m. What is the rise in millimetres?", "time": 50,
+          "answer": 300, "tolerance": 5, "unit": "mm",
+          "explain": "12 000 ÷ 40 = 300 mm." },
+        { "id": "m6", "type": "numeric", "text": "A triangular gable is 6 m at the base and 2.4 m high. What is its area in m²?", "time": 45,
+          "answer": 7.2, "tolerance": 0.1, "unit": "m²", "bonus": true,
+          "explain": "½ × base × height = ½ × 6 × 2.4 = 7.2 m²." }
+      ]
+    }
+  ]
+}

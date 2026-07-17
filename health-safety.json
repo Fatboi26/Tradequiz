@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "id": "health-safety",
+    "name": "Health & Safety",
+    "icon": "🦺",
+    "color": "#E04B5A",
+    "description": "PPE, risk assessment, method statements, CDM and site safety law."
+  },
+  "topics": [
+    { "id": "ppe", "name": "PPE" },
+    { "id": "law", "name": "Legislation" },
+    { "id": "risk", "name": "Risk Assessment" },
+    { "id": "site", "name": "Site Safety" }
+  ],
+  "quizzes": [
+    {
+      "id": "hs-ppe-01",
+      "title": "PPE Identification & Selection",
+      "topic": "ppe",
+      "level": "Level 1",
+      "description": "Pick the right kit for the job — and know why.",
+      "tags": ["ppe-identification"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "h1", "type": "mcq", "text": "Under the PPE at Work Regulations, who must pay for PPE required for work?", "time": 20,
+          "options": ["The employer, at no cost to the worker", "The worker", "Split 50/50", "The main contractor's insurer"], "answer": 0,
+          "explain": "PPE must be provided free of charge. Charging a worker for required PPE is unlawful." },
+        { "id": "h2", "type": "mcq", "text": "PPE sits where in the hierarchy of control?", "time": 25,
+          "options": ["First — always the priority", "Second, after elimination", "Last — a final resort once other controls are applied", "It is not part of the hierarchy"], "answer": 2,
+          "explain": "Eliminate → substitute → engineering controls → administrative controls → PPE. PPE only protects the wearer and only if used correctly." },
+        { "id": "h3", "type": "multi", "text": "Select ALL PPE required for cutting concrete blocks with a disc cutter outdoors.", "time": 35,
+          "options": ["FFP3 respirator", "Eye protection to BS EN 166", "Hearing protection", "Hard hat", "Dielectric gloves", "Sun cream"], "answer": [0,1,2,3],
+          "explain": "Respirable crystalline silica makes an FFP3 mandatory. Dielectric (electrical) gloves are irrelevant here." },
+        { "id": "h4", "type": "match", "text": "Match each PPE item to the hazard it controls.", "time": 45,
+          "pairs": [
+            { "left": "FFP3 mask", "right": "Respirable dust and silica" },
+            { "left": "Hi-vis vest", "right": "Being struck by moving plant" },
+            { "left": "Safety boots (S3)", "right": "Falling objects and penetration underfoot" },
+            { "left": "Ear defenders", "right": "Noise-induced hearing loss" },
+            { "left": "Cut-resistant gloves", "right": "Lacerations from blades and sharp edges" }
+          ],
+          "explain": "Each control targets a specific hazard — generic 'wear PPE' is not a risk control." },
+        { "id": "h5", "type": "truefalse", "text": "A hard hat has no expiry and can be used indefinitely if it looks undamaged.", "time": 20, "answer": false,
+          "explain": "Shells degrade under UV. Manufacturers typically specify replacement 2–5 years from first use, and immediately after any impact." }
+      ]
+    },
+    {
+      "id": "hs-risk-01",
+      "title": "Risk Assessment & Method Statements",
+      "topic": "risk",
+      "level": "Level 2",
+      "description": "The five steps, RAMS, and what a decent control actually looks like.",
+      "tags": ["risk-assessments", "method-statements", "scenario-based-decision-making"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "ra1", "type": "order", "text": "Put the five steps of risk assessment into the correct order.", "time": 50,
+          "items": ["Identify the hazards", "Decide who might be harmed and how", "Evaluate the risks and decide on control measures", "Record your findings and implement them", "Review the assessment and update if necessary"],
+          "explain": "HSE's five steps. Review is not optional — it is triggered by any change to the work, the people or the site." },
+        { "id": "ra2", "type": "mcq", "text": "What is the difference between a hazard and a risk?", "time": 30,
+          "options": ["They mean the same thing", "A hazard is something with the potential to cause harm; risk is the likelihood and severity of that harm occurring", "A hazard is minor; a risk is serious", "A risk is a legal term; a hazard is not"], "answer": 1,
+          "explain": "A trailing lead is a hazard. The chance of someone tripping over it and how badly they'd be hurt is the risk." },
+        { "id": "ra3", "type": "mcq", "text": "A method statement should be written by whom?", "time": 25,
+          "options": ["Anyone on site", "A competent person with knowledge of the task and its hazards", "The client", "The HSE inspector"], "answer": 1,
+          "explain": "Competence means the training, knowledge and experience to do it properly — not just a job title." },
+        { "id": "ra4", "type": "scenario",
+          "scenario": "You are due to install pipework at 2.8 m in an occupied office. The RAMS specifies a podium step. On arrival the podium step is missing and only a wooden pallet stacked on a desk is available. The client is pressing you to finish today.",
+          "text": "What is the correct action?", "time": 45,
+          "options": ["Use the pallet — it's only a short job", "Stop work and do not proceed until the correct access equipment is available", "Ask a colleague to foot the pallet", "Work from the desk without the pallet"],
+          "answer": 1,
+          "explain": "Work at height must follow the RAMS. Improvising access is exactly how the majority of fatal construction falls happen. Commercial pressure is never a defence." },
+        { "id": "ra5", "type": "mcq", "text": "Under RIDDOR, within what period must a specified injury be reported to the HSE?", "time": 30,
+          "options": ["Immediately, then in writing within 10 days", "Within 24 hours", "Within 30 days", "Only at the end of the project"], "answer": 0,
+          "explain": "Specified injuries must be reported without delay, with the written report following within 10 days. Over-7-day injuries get 15 days." },
+        { "id": "ra6", "type": "dragdrop", "text": "Drag each control into the correct level of the hierarchy of control.", "time": 60,
+          "targets": [
+            { "id": "c1", "label": "Elimination", "accepts": "d1" },
+            { "id": "c2", "label": "Substitution", "accepts": "d2" },
+            { "id": "c3", "label": "Engineering control", "accepts": "d3" },
+            { "id": "c4", "label": "Administrative control", "accepts": "d4" },
+            { "id": "c5", "label": "PPE", "accepts": "d5" }
+          ],
+          "items": [
+            { "id": "d1", "label": "Pre-fabricate the assembly at ground level" },
+            { "id": "d2", "label": "Use a low-solvent adhesive instead of a solvent-based one" },
+            { "id": "d3", "label": "Fit on-tool dust extraction to the cutter" },
+            { "id": "d4", "label": "Rotate staff to limit exposure time" },
+            { "id": "d5", "label": "Issue FFP3 respirators" }
+          ],
+          "explain": "Work down the list, not up it. Reaching for PPE first is the most common failure in a weak risk assessment." }
+      ]
+    },
+    {
+      "id": "hs-law-01",
+      "title": "Legislation & CDM",
+      "topic": "law",
+      "level": "Level 2",
+      "description": "Who is responsible for what, and under which Act.",
+      "tags": ["building-regulations"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "l1", "type": "mcq", "text": "Which Act places a general duty on employers to ensure, so far as is reasonably practicable, the health and safety of employees?", "time": 25,
+          "options": ["Health and Safety at Work etc. Act 1974", "Factories Act 1961", "Building Act 1984", "Equality Act 2010"], "answer": 0,
+          "explain": "Section 2 of HASAWA 1974. Section 7 places the matching duty on employees to take reasonable care." },
+        { "id": "l2", "type": "mcq", "text": "Under CDM 2015, who has overall control of the construction phase on site?", "time": 30,
+          "options": ["The client", "The principal designer", "The principal contractor", "The HSE"], "answer": 2,
+          "explain": "The principal designer controls the pre-construction phase; the principal contractor controls the construction phase." },
+        { "id": "l3", "type": "truefalse", "text": "Under HASAWA section 7, an employee can be prosecuted for failing to take reasonable care of their own safety.", "time": 20, "answer": true,
+          "explain": "Duties run both ways. Employees have been prosecuted for removing guards or ignoring safe systems of work." },
+        { "id": "l4", "type": "match", "text": "Match each regulation to its subject.", "time": 45,
+          "pairs": [
+            { "left": "COSHH 2002", "right": "Hazardous substances" },
+            { "left": "LOLER 1998", "right": "Lifting equipment and operations" },
+            { "left": "Work at Height Regulations 2005", "right": "Preventing falls" },
+            { "left": "PUWER 1998", "right": "Safe work equipment" },
+            { "left": "RIDDOR 2013", "right": "Reporting injuries and dangerous occurrences" }
+          ],
+          "explain": "Learn the acronyms — they come up constantly in exams and on site inductions." }
+      ]
+    }
+  ]
+}

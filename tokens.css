@@ -1,0 +1,120 @@
+/* ============================================================================
+   tokens.css — design tokens
+   ----------------------------------------------------------------------------
+   These are FALLBACK values only. At runtime js/core/config.js reads
+   config/branding.json and overwrites the colour/font tokens on :root.
+   Never hard-code a colour anywhere else in the CSS — always use a var().
+   ========================================================================== */
+
+:root {
+  /* ---- brand colours (overwritten from config/branding.json) ------------- */
+  --c-primary:    #00857D;
+  --c-secondary:  #2C5FA8;
+  --c-accent:     #B0208C;
+  --c-support:    #6C3F98;
+  --c-bg:         #0E1826;
+  --c-bg-alt:     #16233A;
+  --c-surface:    #1E2E49;
+  --c-surface-alt:#27395A;
+  --c-text:       #F2F6FB;
+  --c-text-muted: #A9BAD2;
+  --c-success:    #22B573;
+  --c-warning:    #E8A33D;
+  --c-danger:     #E04B5A;
+  --c-info:       #3FA9F5;
+  --c-gold:       #F5C64C;
+
+  /* Answer-tile colours, set from branding.answerColors */
+  --c-ans-1: #E04B5A;
+  --c-ans-2: #2C5FA8;
+  --c-ans-3: #E8A33D;
+  --c-ans-4: #22B573;
+  --c-ans-5: #B0208C;
+  --c-ans-6: #3FA9F5;
+
+  /* ---- typography ------------------------------------------------------- */
+  --font-heading: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  /* Root font size is scaled by the accessibility "text size" control, which
+     sets --font-scale on <html>. All type is sized in rem so it follows. */
+  --font-scale: 1;
+
+  --fs-xs:   clamp(0.72rem, 0.70rem + 0.1vw, 0.80rem);
+  --fs-sm:   clamp(0.84rem, 0.80rem + 0.2vw, 0.94rem);
+  --fs-base: clamp(0.98rem, 0.94rem + 0.2vw, 1.08rem);
+  --fs-md:   clamp(1.12rem, 1.02rem + 0.5vw, 1.32rem);
+  --fs-lg:   clamp(1.36rem, 1.14rem + 1.0vw, 1.9rem);
+  --fs-xl:   clamp(1.75rem, 1.30rem + 2.1vw, 2.9rem);
+  --fs-2xl:  clamp(2.3rem, 1.5rem + 3.6vw, 4.4rem);
+  --fs-display: clamp(2.8rem, 1.6rem + 5.4vw, 6rem);
+
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.14em;
+
+  /* ---- spacing scale ---------------------------------------------------- */
+  --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
+  --s-5: 1.5rem;   --s-6: 2rem;     --s-7: 3rem;     --s-8: 4rem;
+
+  /* ---- radii ------------------------------------------------------------ */
+  /* --r-shield is the signature shape, lifted from the CNWL logo's
+     overlapping rounded-shield forms: three round corners, one square. */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  --r-shield: 22px 22px 22px 4px;
+
+  /* ---- elevation -------------------------------------------------------- */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, .28);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .34);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, .45);
+  /* Chunky "pressable" bottom edge used on primary controls & answer tiles */
+  --lip: 0 5px 0 rgba(0, 0, 0, .30);
+  --lip-sm: 0 3px 0 rgba(0, 0, 0, .30);
+
+  /* ---- motion ----------------------------------------------------------- */
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 460ms;
+  --ease: cubic-bezier(.2, .8, .25, 1);
+  --ease-back: cubic-bezier(.34, 1.56, .64, 1);
+
+  --layout-max: 1180px;
+}
+
+/* ---- High contrast mode (toggled by js/ui/a11y.js) ---------------------- */
+:root[data-contrast="high"] {
+  --c-bg:         #000000;
+  --c-bg-alt:     #000000;
+  --c-surface:    #0B0B0B;
+  --c-surface-alt:#161616;
+  --c-text:       #FFFFFF;
+  --c-text-muted: #E4E4E4;
+  --shadow-sm: none; --shadow-md: none; --shadow-lg: none;
+}
+:root[data-contrast="high"] * {
+  border-color: #FFFFFF !important;
+}
+:root[data-contrast="high"] .card,
+:root[data-contrast="high"] .panel,
+:root[data-contrast="high"] .tile {
+  outline: 2px solid #FFF;
+}
+
+/* ---- Reduced motion: honour BOTH the OS setting and our own toggle ------ */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="full"]) * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root[data-motion="reduced"] * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}

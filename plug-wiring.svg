@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img">
+  <title>Interior of a UK 13A plug top showing terminals, cord grip and fuse</title>
+  <rect width="480" height="320" rx="12" fill="#f4f7fa"/>
+  <rect x="40" y="30" width="400" height="260" rx="24" fill="#e6ebf1" stroke="#98a6b6" stroke-width="3"/>
+  <!-- pins -->
+  <rect x="220" y="52" width="40" height="70" rx="4" fill="#b9c4cc" stroke="#6b7885" stroke-width="2"/>
+  <rect x="120" y="150" width="70" height="34" rx="4" fill="#b9c4cc" stroke="#6b7885" stroke-width="2"/>
+  <rect x="290" y="150" width="70" height="34" rx="4" fill="#b9c4cc" stroke="#6b7885" stroke-width="2"/>
+  <!-- fuse -->
+  <rect x="300" y="196" width="86" height="30" rx="8" fill="#d9c27a" stroke="#8a7530" stroke-width="2"/>
+  <text x="343" y="217" font-size="15" font-family="sans-serif" text-anchor="middle" fill="#3d3313">13A</text>
+  <!-- cord grip -->
+  <rect x="190" y="256" width="100" height="26" rx="6" fill="#4a5a6b"/>
+  <!-- conductors -->
+  <path d="M240 256V122" stroke="#2f8f5b" stroke-width="9" fill="none"/>
+  <path d="M225 262q-80 6-90-70" stroke="#2f6fb2" stroke-width="9" fill="none"/>
+  <path d="M258 262q80 6 92-52" stroke="#8b5a2b" stroke-width="9" fill="none"/>
+  <!-- labels -->
+  <g font-family="sans-serif" font-size="16" fill="#22303f">
+    <circle cx="240" cy="96" r="14" fill="#fff" stroke="#22303f" stroke-width="2"/><text x="240" y="102" text-anchor="middle">A</text>
+    <circle cx="155" cy="167" r="14" fill="#fff" stroke="#22303f" stroke-width="2"/><text x="155" y="173" text-anchor="middle">B</text>
+    <circle cx="325" cy="167" r="14" fill="#fff" stroke="#22303f" stroke-width="2"/><text x="325" y="173" text-anchor="middle">C</text>
+    <circle cx="343" cy="240" r="14" fill="#fff" stroke="#22303f" stroke-width="2"/><text x="343" y="246" text-anchor="middle">D</text>
+    <circle cx="240" cy="269" r="14" fill="#fff" stroke="#22303f" stroke-width="2"/><text x="240" y="275" text-anchor="middle">E</text>
+  </g>
+</svg>

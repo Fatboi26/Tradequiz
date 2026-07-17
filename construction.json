@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "subject": { "id": "construction", "name": "Construction", "icon": "🏗️", "color": "#6C3F98",
+    "description": "Building fabric, drawings, materials and Building Regulations." },
+  "topics": [
+    { "id": "drawings", "name": "Technical Drawing" },
+    { "id": "fabric", "name": "Building Fabric" },
+    { "id": "regs", "name": "Building Regulations" }
+  ],
+  "quizzes": [
+    {
+      "id": "con-drawings-01",
+      "title": "Drawings & Scales",
+      "topic": "drawings", "level": "Level 2",
+      "description": "Read a drawing without guessing.",
+      "tags": ["blueprint-interpretation", "measuring-exercises", "calculations"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "d1", "type": "numeric", "text": "On a 1:50 drawing, a wall measures 84 mm. What is its real length in metres?", "time": 45,
+          "answer": 4.2, "tolerance": 0.05, "unit": "m",
+          "explain": "84 mm × 50 = 4200 mm = 4.2 m." },
+        { "id": "d2", "type": "mcq", "text": "Which scale is normally used for a location/site plan?", "time": 25,
+          "options": ["1:1", "1:20", "1:200 or 1:500", "1:5"], "answer": 2,
+          "explain": "1:1250 or 1:2500 for the location plan, 1:200/1:500 for the site plan, 1:50/1:100 for floor plans, 1:5/1:10 for details." },
+        { "id": "d3", "type": "match", "text": "Match each drawing abbreviation to its meaning.", "time": 40,
+          "pairs": [
+            { "left": "FFL", "right": "Finished floor level" },
+            { "left": "DPC", "right": "Damp proof course" },
+            { "left": "RWP", "right": "Rainwater pipe" },
+            { "left": "SVP", "right": "Soil vent pipe" },
+            { "left": "CL", "right": "Centre line" }
+          ],
+          "explain": "These appear on nearly every set of construction drawings you'll ever open." },
+        { "id": "d4", "type": "numeric", "text": "A room is 5.4 m × 3.6 m. How many square metres of floor screed are needed, allowing 10% waste? (1 d.p.)", "time": 60,
+          "answer": 21.4, "tolerance": 0.2, "unit": "m²", "bonus": true,
+          "explain": "5.4 × 3.6 = 19.44 m². × 1.10 = 21.384 ≈ 21.4 m²." }
+      ]
+    },
+    {
+      "id": "con-fabric-01",
+      "title": "Building Fabric & Regs",
+      "topic": "fabric", "level": "Level 2",
+      "description": "Cavity walls, DPCs and the Approved Documents.",
+      "tags": ["building-regulations", "material-identification"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "b1", "type": "mcq", "text": "What is the minimum height of a DPC above finished external ground level?", "time": 25,
+          "options": ["75 mm", "150 mm", "225 mm", "300 mm"], "answer": 1,
+          "explain": "150 mm (two brick courses) stops rain splash-back bridging the DPC." },
+        { "id": "b2", "type": "match", "text": "Match each Approved Document to its subject.", "time": 50,
+          "pairs": [
+            { "left": "Part A", "right": "Structure" },
+            { "left": "Part B", "right": "Fire safety" },
+            { "left": "Part L", "right": "Conservation of fuel and power" },
+            { "left": "Part M", "right": "Access to and use of buildings" },
+            { "left": "Part P", "right": "Electrical safety in dwellings" }
+          ],
+          "explain": "Part P is the one that brings domestic electrical work under Building Control." },
+        { "id": "b3", "type": "truefalse", "text": "Wall ties in a cavity wall should slope slightly downwards towards the inner leaf.", "time": 25, "answer": false,
+          "explain": "They must slope down towards the OUTER leaf so any water runs away from the inside, and the drip must sit in the cavity." }
+      ]
+    }
+  ]
+}
