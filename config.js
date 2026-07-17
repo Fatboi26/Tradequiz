@@ -19,7 +19,7 @@ const FALLBACK = {
   tagline: 'Level up your trade.',
   logo: '', logoSecondary: '',
   colors: {}, answerColors: [], fonts: {}, icons: {},
-  features: { sound: true, confetti: true, showGroupLogo: false, teacherPin: '1234' },
+  features: { sound: true, confetti: true, showGroupLogo: false, teacherPin: '2611' },
   footer: { text: '', links: [] },
 };
 
