@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Quiet Fox - Stealth operative wearing PPE and holding a voltage tester">
+  <title>Quiet Fox - Stealth operative wearing PPE and holding a voltage tester</title>
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b46d6"/><stop offset="1" stop-color="#8f6df0"/>
+    </linearGradient>
+    <clipPath id="clip6"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip6)">
+    <rect width="200" height="200" fill="url(#bg6)"/>
+    <circle cx="100" cy="196" r="86" fill="rgba(255,255,255,.10)"/>
+    <!-- torso / hi-vis vest with reflective banding -->
+    <path d="M46 200v-24c0-20 16-34 36-38h36c20 4 36 18 36 38v24z" fill="#c9f24a"/>
+    <path d="M74 142l10 58h-9l-9-52z" fill="#eef3f6" opacity=".9"/>
+    <path d="M126 142l-10 58h9l9-52z" fill="#eef3f6" opacity=".9"/>
+    <rect x="46" y="176" width="108" height="8" fill="#eef3f6" opacity=".85"/>
+    <!-- neck + head -->
+    <rect x="88" y="112" width="24" height="28" rx="8" fill="#c98a5e"/>
+    <rect x="66" y="60" width="68" height="76" rx="30" fill="#c98a5e"/>
+    <!-- eyes (hidden under sealed helmets) -->
+    <circle cx="86" cy="98" r="4.5" fill="#22262a"/><circle cx="114" cy="98" r="4.5" fill="#22262a"/><path d="M90 116q10 7 20 0" stroke="#22262a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- headgear -->
+    <path d="M64 78c0-20 16-36 36-36s36 16 36 36z" fill="#2f3b30"/><rect x="60" y="74" width="80" height="12" rx="6" fill="#7fd18a"/><circle cx="100" cy="38" r="7" fill="#7fd18a"/>
+    <!-- tool -->
+    <g transform="translate(124,84) rotate(14) scale(0.86)"><rect x="26" y="10" width="9" height="34" rx="4" fill="#e0b03a"/><rect x="28" y="44" width="5" height="10" fill="#8d99a3"/><circle cx="30.5" cy="18" r="3" fill="#e04b4b"/></g>
+    <!-- glove holding tool -->
+    <path d="M138 128c14-4 26 4 28 18l-24 6z" fill="#c9f24a" opacity=".95"/>
+    <circle cx="146" cy="140" r="14" fill="#2b2f33"/>
+  </g>
+  <circle cx="100" cy="100" r="98" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="4"/>
+</svg>

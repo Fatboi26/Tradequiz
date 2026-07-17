@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "subject": { "id": "english", "name": "English", "icon": "📚", "color": "#B0208C",
+    "description": "Workplace communication, technical writing and reading for meaning." },
+  "topics": [
+    { "id": "writing", "name": "Workplace Writing" },
+    { "id": "grammar", "name": "Grammar & Spelling" },
+    { "id": "reading", "name": "Reading for Meaning" }
+  ],
+  "quizzes": [
+    {
+      "id": "eng-work-01",
+      "title": "Communication on Site",
+      "topic": "writing", "level": "Level 2",
+      "description": "Writing that gets read, understood and acted on.",
+      "tags": ["method-statements"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        { "id": "n1", "type": "mcq", "text": "Which opening is most appropriate for an email to a customer you have not met?", "time": 25,
+          "options": ["Alright mate,", "Dear Mrs Okonkwo,", "Hiya!!", "To whom it may concern,"], "answer": 1,
+          "explain": "Named and formal. 'To whom it may concern' is for when you genuinely don't know the recipient." },
+        { "id": "n2", "type": "mcq", "text": "Which sentence is written in the passive voice?", "time": 30,
+          "options": ["The plumber fitted the valve.", "The valve was fitted by the plumber.", "Fit the valve.", "The plumber is fitting the valve."], "answer": 1,
+          "explain": "Passive puts the object first and the actor last (or drops them). Method statements often use it — but active is clearer for instructions." },
+        { "id": "n3", "type": "mcq", "text": "Choose the correctly spelled word.", "time": 20,
+          "options": ["Maintainance", "Maintenence", "Maintenance", "Maintanance"], "answer": 2,
+          "explain": "Maintenance — 'ten' in the middle, not 'tain'. It's on nearly every job sheet you'll write." },
+        { "id": "n4", "type": "mcq", "text": "In a method statement, why should each step begin with a verb (e.g. 'Isolate the supply')?", "time": 30,
+          "options": ["It makes the document longer", "It makes each step an unambiguous instruction someone can follow and tick off", "It is required by law", "It sounds more professional"], "answer": 1,
+          "explain": "Imperative verbs remove ambiguity. 'The supply should ideally be isolated' leaves room for someone not to do it." },
+        { "id": "n5", "type": "truefalse", "text": "'Their', 'there' and 'they're' are homophones.", "time": 20, "answer": true,
+          "explain": "Same sound, different spelling and meaning. Spellcheck will not catch these for you." },
+        { "id": "n6", "type": "order", "text": "Put this customer complaint response into a logical order.", "time": 50,
+          "items": ["Thank the customer for getting in touch", "Acknowledge the specific problem they reported", "Explain what caused it, in plain language", "State what you will do to put it right and by when", "Give a direct contact for any further questions"],
+          "explain": "Acknowledge before explaining. Jumping straight to the cause reads as defensive." }
+      ]
+    }
+  ]
+}

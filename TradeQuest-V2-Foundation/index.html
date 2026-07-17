@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="TradeQuest — quiz and revision platform for trades, construction and vocational learners.">
+  <meta name="theme-color" content="#0E1826">
+
+  <!-- Title, logos, colours and fonts are all overwritten at runtime from
+       config/branding.json. What is hard-coded here is only what shows in the
+       fraction of a second before that file lands. Re-brand the JSON, not this. -->
+  <title>TradeQuest</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Load order matters: tokens.css defines the variables the rest consume. -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to main content</a>
+
+  <!-- Shared screen-reader channel. utils.announce() writes here. -->
+  <div id="sr-live" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="images/logo-cnwl.webp" alt="" data-brand="logo">
+        <span class="brand__text">
+          <span class="brand__name" data-brand="platformName">TradeQuest</span>
+          <span class="brand__sub" data-brand="collegeName">College of North West London</span>
+        </span>
+      </a>
+      <div class="spacer"></div>
+      <nav class="row" aria-label="Main">
+        <a class="btn btn--ghost btn--sm" href="student.html">Play</a>
+        <a class="btn btn--ghost btn--sm" href="teacher.html">Teachers</a>
+        <!-- a11y.mount() injects the display &amp; sound button here. -->
+        <div id="a11y-mount"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="container" tabindex="-1">
+    <div class="loader" role="status">
+      <div class="loader__spin" aria-hidden="true"></div>
+      <span class="loader__text">Loading…</span>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container stack">
+      <div class="site-footer__logos">
+        <img data-brand="logo" data-brand-alt="logoAlt" src="images/logo-cnwl.webp" alt="College of North West London">
+        <img data-brand-group data-brand="logoSecondary" data-brand-alt="logoSecondaryAlt" src="images/logo-ucg.webp" alt="United Colleges Group">
+      </div>
+      <p data-brand="footer.text">College of North West London — part of United Colleges Group.</p>
+      <nav class="site-footer__links row row--wrap" aria-label="Footer" data-brand-links></nav>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="container">TradeQuest needs JavaScript switched on to run its quizzes.</p>
+  </noscript>
+
+  <script type="module" src="js/app/hub.js"></script>
+</body>
+</html>

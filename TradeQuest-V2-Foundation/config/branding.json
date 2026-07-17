@@ -1,0 +1,66 @@
+{
+  "_comment": "EDIT THIS FILE TO RE-BRAND THE WHOLE PLATFORM. No code changes required.",
+  "collegeName": "College of North West London",
+  "collegeShortName": "CNWL",
+  "groupName": "United Colleges Group",
+  "platformName": "TradeQuest",
+  "tagline": "Level up your trade.",
+
+  "logo": "images/logo-cnwl.webp",
+  "logoAlt": "College of North West London",
+  "logoSecondary": "images/logo-ucg.webp",
+  "logoSecondaryAlt": "United Colleges Group",
+  "favicon": "assets/favicon.svg",
+
+  "colors": {
+    "primary":    "#00857D",
+    "secondary":  "#2C5FA8",
+    "accent":     "#B0208C",
+    "support":    "#6C3F98",
+    "bg":         "#0E1826",
+    "bgAlt":      "#16233A",
+    "surface":    "#1E2E49",
+    "surfaceAlt": "#27395A",
+    "text":       "#F2F6FB",
+    "textMuted":  "#A9BAD2",
+    "success":    "#22B573",
+    "warning":    "#E8A33D",
+    "danger":     "#E04B5A",
+    "info":       "#3FA9F5",
+    "gold":       "#F5C64C"
+  },
+
+  "answerColors": ["#E04B5A", "#2C5FA8", "#E8A33D", "#22B573", "#B0208C", "#3FA9F5"],
+
+  "fonts": {
+    "heading": "'Trebuchet MS', 'Segoe UI', system-ui, sans-serif",
+    "body": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "mono": "ui-monospace, 'Cascadia Code', Consolas, monospace",
+    "googleFontsUrl": ""
+  },
+
+  "icons": {
+    "xp": "\u2b50",
+    "streak": "\ud83d\udd25",
+    "badge": "\ud83c\udfc5",
+    "level": "\ud83c\udf96\ufe0f",
+    "timer": "\u23f1\ufe0f",
+    "correct": "\u2705",
+    "wrong": "\u274c",
+    "trophy": "\ud83c\udfc6"
+  },
+
+  "features": {
+    "sound": true,
+    "confetti": true,
+    "showGroupLogo": true,
+    "teacherPin": "1234"
+  },
+
+  "footer": {
+    "text": "Built for CNWL construction & trades learners.",
+    "links": [
+      { "label": "College website", "url": "https://www.cnwl.ac.uk" }
+    ]
+  }
+}

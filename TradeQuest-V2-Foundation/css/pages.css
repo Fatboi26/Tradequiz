@@ -1,0 +1,203 @@
+/* ============================================================================
+   pages.css — layout for whole screens.
+   ----------------------------------------------------------------------------
+   tokens → base → components → game → pages. Components own the reusable
+   pieces; this file only positions them into screens and adds the handful of
+   page-specific chrome bits (hero, dashboard filters, editor).
+   ========================================================================== */
+
+/* ------------------------------------------------------------ containers -- */
+.container--wide { width: min(100% - 2rem, 1400px); }
+.centered { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--s-3); }
+.row--end { justify-content: flex-end; }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* Page entrance. Paired with .is-in, set by the router after each render. */
+#app { outline: none; }
+#app.is-in { animation: view-in var(--dur-slow) var(--ease) both; }
+@keyframes view-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ------------------------------------------------------------- page head -- */
+.page-head__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+.page-head__sub { color: var(--c-text-muted); margin: var(--s-2) 0 0; max-width: 62ch; }
+.back-link { align-self: flex-start; }
+.topic-head {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ hero -- */
+/* The brand pools sit behind the hero rather than on the body, so the colour
+   follows the content instead of washing the whole page out. */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: var(--s-8) var(--s-4);
+  border-radius: var(--r-shield);
+  background:
+    radial-gradient(60% 90% at 15% 0%, color-mix(in srgb, var(--c-primary) 34%, transparent), transparent 70%),
+    radial-gradient(55% 85% at 85% 10%, color-mix(in srgb, var(--c-accent) 26%, transparent), transparent 70%),
+    var(--c-bg-alt);
+  overflow: hidden;
+}
+.hero__logo { height: 56px; width: auto; margin-bottom: var(--s-4); }
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  line-height: .95;
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+.hero__tagline {
+  font-size: var(--fs-lg);
+  color: var(--c-text-muted);
+  margin: var(--s-3) 0 var(--s-6);
+}
+
+.feature__icon { font-size: 2rem; }
+.feature h3 { margin: 0; font-size: var(--fs-md); }
+.welcome { gap: var(--s-4); }
+.welcome h2 { margin: 0; font-size: var(--fs-lg); }
+.avatar-chip--lg { width: 64px; height: 64px; }
+
+/* -------------------------------------------------------------- onboard --- */
+.onboard { width: min(100% , 640px); margin-inline: auto; padding-block: var(--s-5); }
+
+/* --------------------------------------------------------- subject hero --- */
+.subject-hero {
+  display: flex; align-items: center; gap: var(--s-5);
+  padding: var(--s-5);
+  border-radius: var(--r-shield);
+  border-left: 6px solid var(--subject-c, var(--c-primary));
+  background: linear-gradient(100deg,
+    color-mix(in srgb, var(--subject-c, var(--c-primary)) 22%, var(--c-surface)),
+    var(--c-surface) 70%);
+}
+.subject-hero h1 { margin: 0; font-family: var(--font-heading); font-size: var(--fs-xl); }
+.subject-hero__icon { font-size: 3rem; line-height: 1; }
+.quick-nav { display: flex; gap: var(--s-2); flex-wrap: wrap; }
+
+/* -------------------------------------------------------------- playing --- */
+.q-after { margin-top: var(--s-5); }
+.q-verdict {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  margin: 0;
+}
+.q-verdict.is-correct { color: var(--c-success); }
+.q-verdict.is-wrong { color: var(--c-danger); }
+
+.hud__score-wrap { font-family: var(--font-heading); }
+.hud__timer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  min-width: 4ch;
+  text-align: right;
+}
+.progress--timer { height: 10px; }
+.progress__fill--timer { background: var(--c-info); transition: width 120ms linear; }
+.progress__fill--timer.is-urgent { background: var(--c-danger); }
+.hud__life.is-lost { opacity: .25; filter: grayscale(1); }
+.team-score.is-winner { outline: 2px solid var(--c-gold); }
+
+/* -------------------------------------------------------------- results --- */
+.results-hero { text-align: center; }
+
+/* ------------------------------------------------------------ dashboard --- */
+.filters { align-items: flex-end; gap: var(--s-4); }
+.field--grow { flex: 1 1 260px; }
+.quiz-card--admin { align-items: stretch; }
+.quiz-card--admin .quiz-card__title { margin: 0; }
+
+.card--warn {
+  border-color: color-mix(in srgb, var(--c-warning) 60%, transparent);
+  background: color-mix(in srgb, var(--c-warning) 10%, var(--c-surface));
+}
+.card--warn h2, .card--warn h3 { margin: 0; font-size: var(--fs-md); }
+.chip--warn {
+  background: color-mix(in srgb, var(--c-warning) 24%, transparent);
+  color: var(--c-warning);
+}
+
+/* Monospaced JSON editor. tab-size keeps pasted question banks readable. */
+.textarea--code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  tab-size: 2;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  min-height: 340px;
+}
+
+.modal--wide::backdrop { background: rgb(0 0 0 / .6); }
+.modal--wide { width: min(100% - 2rem, 980px); }
+
+/* --------------------------------------------------- teacher previews ----- */
+.q-summary {
+  display: flex; gap: var(--s-3); align-items: flex-start;
+  padding: var(--s-3);
+  border-radius: var(--r-md);
+  background: var(--c-surface-alt);
+}
+.q-summary__num {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 800;
+}
+.q-summary__text { font-weight: 600; }
+.q-summary__meta { display: flex; gap: var(--s-2); flex-wrap: wrap; margin-top: var(--s-2); }
+
+/* --------------------------------------------------------- large display -- */
+/* Interactive whiteboards: everything scales up, nothing reflows. */
+@media (min-width: 1500px) {
+  .hero__logo { height: 72px; }
+  .subject-hero__icon { font-size: 4rem; }
+}
+
+@media (max-width: 640px) {
+  .subject-hero { flex-direction: column; text-align: center; }
+  .hero { padding: var(--s-6) var(--s-3); }
+  .quick-nav .btn { flex: 1 1 auto; }
+
+  /* The header is brand + nav + settings on one line. On a narrow phone that
+     is 20-odd pixels too wide, which shows up as a horizontal scrollbar on
+     every page. Shrink the brand and let its name truncate rather than
+     wrapping the nav onto a second row and eating vertical space. */
+  .site-header__inner { gap: var(--s-2); min-height: 58px; }
+  .brand { min-width: 0; gap: var(--s-2); }
+  .brand__logo { height: 30px; }
+  .brand__name {
+    font-size: var(--fs-base);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .site-header__inner .btn--sm { padding-inline: var(--s-2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #app.is-in { animation: none; }
+}
+[data-motion="reduced"] #app.is-in { animation: none; }

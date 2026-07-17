@@ -1,0 +1,13 @@
+{
+  "_comment": "SUBJECT REGISTRY. To add a subject: drop a new JSON file in /questions/ and add one line below. No code changes.",
+  "schemaVersion": 1,
+  "subjects": [
+    { "id": "plumbing",      "file": "questions/plumbing.json",      "enabled": true },
+    { "id": "electrical",    "file": "questions/electrical.json",    "enabled": true },
+    { "id": "carpentry",     "file": "questions/carpentry.json",     "enabled": true },
+    { "id": "construction",  "file": "questions/construction.json",  "enabled": true },
+    { "id": "health-safety", "file": "questions/health-safety.json", "enabled": true },
+    { "id": "maths",         "file": "questions/maths.json",         "enabled": true },
+    { "id": "english",       "file": "questions/english.json",       "enabled": true }
+  ]
+}

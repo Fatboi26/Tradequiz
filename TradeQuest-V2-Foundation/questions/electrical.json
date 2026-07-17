@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "id": "electrical",
+    "name": "Electrical Installation",
+    "icon": "⚡",
+    "color": "#E8A33D",
+    "description": "BS 7671, safe isolation, cables, protective devices and testing."
+  },
+  "topics": [
+    { "id": "tools", "name": "Tools & Test Equipment" },
+    { "id": "regs", "name": "Wiring Regulations" },
+    { "id": "safe-iso", "name": "Safe Isolation" },
+    { "id": "calcs", "name": "Calculations" },
+    { "id": "faults", "name": "Fault Finding" }
+  ],
+  "quizzes": [
+    {
+      "id": "ele-safeiso-01",
+      "title": "Safe Isolation Procedure",
+      "topic": "safe-iso",
+      "level": "Level 2",
+      "description": "The sequence that keeps you alive. Get it in the right order.",
+      "tags": ["installation-sequencing", "risk-assessments"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        {
+          "id": "e1",
+          "type": "order",
+          "text": "Put the safe isolation procedure into the correct sequence.",
+          "time": 60,
+          "items": [
+            "Identify the circuit to be isolated",
+            "Prove the voltage indicator on a known live source or proving unit",
+            "Switch off and isolate the circuit at the point of isolation",
+            "Verify the circuit is dead with the voltage indicator",
+            "Re-prove the voltage indicator on the known source",
+            "Lock off the isolator and retain the only key",
+            "Fit a caution notice at the point of isolation"
+          ],
+          "explain": "Prove → isolate → test dead → re-prove. Re-proving after the test is the step people skip, and it is the one that catches a failed tester."
+        },
+        {
+          "id": "e2",
+          "type": "mcq",
+          "text": "Which device must be used to prove a voltage indicator before and after testing dead?",
+          "time": 20,
+          "options": ["A proving unit or known live supply", "A multimeter set to continuity", "A neon screwdriver", "An insulation resistance tester"],
+          "answer": 0,
+          "explain": "GS38 rules out neon screwdrivers entirely. A proving unit gives a known live source you can trust."
+        },
+        {
+          "id": "e3",
+          "type": "truefalse",
+          "text": "It is acceptable to leave a lock-off device fitted and give the key to the site supervisor while you work.",
+          "time": 20,
+          "answer": false,
+          "explain": "The person working on the circuit retains the only key. Handing it over means someone else can re-energise the circuit."
+        },
+        {
+          "id": "e4",
+          "type": "multi",
+          "text": "Select ALL items of PPE/equipment required for safe isolation of a domestic consumer unit.",
+          "time": 30,
+          "options": ["GS38-compliant voltage indicator", "Proving unit", "Lock-off kit and caution notice", "Ear defenders", "Insulated tools", "Hi-vis vest"],
+          "answer": [0, 1, 2, 4],
+          "explain": "Ear defenders and hi-vis are not part of the isolation procedure — though site rules may require them anyway."
+        }
+      ]
+    },
+    {
+      "id": "ele-regs-01",
+      "title": "BS 7671 Wiring Regulations",
+      "topic": "regs",
+      "level": "Level 2",
+      "description": "Cable identification, RCD protection and zones.",
+      "tags": ["wiring-regulations", "british-standards", "image-hotspot"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        {
+          "id": "w1",
+          "type": "image",
+          "text": "In this 13A plug top, which labelled conductor is the CPC (earth)?",
+          "image": "images/q/plug-wiring.svg",
+          "imageAlt": "Cutaway of a UK 13A plug showing conductors labelled A to E",
+          "time": 25,
+          "options": ["A — green/yellow to the top pin", "B — blue to the left pin", "C — brown via the fuse", "E — the cord grip"],
+          "answer": 0,
+          "explain": "Earth goes to the longest top pin, green/yellow, and is left slightly longer than L and N so it is last to disconnect if the cord is pulled."
+        },
+        {
+          "id": "w2",
+          "type": "hotspot",
+          "text": "Click the fuse in the plug top.",
+          "image": "images/q/plug-wiring.svg",
+          "imageAlt": "Cutaway of a UK 13A plug",
+          "time": 20,
+          "areas": [{ "shape": "rect", "x": 60, "y": 58, "w": 22, "h": 14 }],
+          "explain": "The fuse sits in the line (brown) conductor only, so a blown fuse leaves the appliance dead but still connected to neutral."
+        },
+        {
+          "id": "w3",
+          "type": "mcq",
+          "text": "Under BS 7671, what is the maximum disconnection time for a 230 V final circuit up to 63 A on a TN system?",
+          "time": 30,
+          "options": ["0.2 s", "0.4 s", "1.0 s", "5.0 s"],
+          "answer": 1,
+          "explain": "0.4 s for final circuits up to 63 A on TN. 5 s applies to distribution circuits."
+        },
+        {
+          "id": "w4",
+          "type": "mcq",
+          "text": "Which colour is the line conductor in a modern harmonised twin & earth cable?",
+          "time": 15,
+          "options": ["Red", "Brown", "Black", "Grey"],
+          "answer": 1,
+          "explain": "Brown = line, blue = neutral since harmonisation in 2004. Red/black is the pre-2004 system."
+        },
+        {
+          "id": "w5",
+          "type": "match",
+          "text": "Match each protective device to what it primarily protects against.",
+          "time": 45,
+          "pairs": [
+            { "left": "MCB", "right": "Overload and short-circuit current" },
+            { "left": "RCD", "right": "Earth leakage / electric shock" },
+            { "left": "RCBO", "right": "Both overcurrent and earth leakage on one circuit" },
+            { "left": "SPD", "right": "Transient overvoltage (surges)" }
+          ],
+          "explain": "An RCD does not protect against overload — that is why RCBOs exist."
+        },
+        {
+          "id": "w6",
+          "type": "numeric",
+          "text": "A 230 V circuit draws 9.2 A. What is the resistance of the load, in ohms? (Give to 1 decimal place.)",
+          "time": 45,
+          "answer": 25,
+          "tolerance": 0.5,
+          "unit": "Ω",
+          "bonus": true,
+          "explain": "R = V ÷ I = 230 ÷ 9.2 = 25 Ω."
+        }
+      ]
+    },
+    {
+      "id": "ele-faults-01",
+      "title": "Fault Finding Scenarios",
+      "topic": "faults",
+      "level": "Level 3",
+      "description": "Think like a spark on a call-out.",
+      "tags": ["fault-finding", "scenario-based-decision-making"],
+      "schedule": { "publishAt": null, "expiresAt": null },
+      "questions": [
+        {
+          "id": "ff1",
+          "type": "scenario",
+          "scenario": "A customer reports that the RCD protecting the downstairs sockets trips every time the kettle is switched on, but never at any other time. Other circuits are unaffected.",
+          "text": "What is the most likely fault?",
+          "time": 45,
+          "options": [
+            "A deteriorated element in the kettle causing earth leakage under load",
+            "The RCD is undersized for the circuit",
+            "A loose neutral at the consumer unit",
+            "The circuit is overloaded"
+            ],
+          "answer": 0,
+          "explain": "Leakage only appears when the element heats and draws current. Overload would trip the MCB, not the RCD."
+        },
+        {
+          "id": "ff2",
+          "type": "scenario",
+          "scenario": "During an insulation resistance test on a lighting circuit you record 0.02 MΩ between line and earth. All lamps have been removed and the circuit is isolated.",
+          "text": "What should you do?",
+          "time": 45,
+          "options": [
+            "Record it as a pass — it is above zero",
+            "Investigate: the reading is far below the 1 MΩ minimum, indicating a fault",
+            "Increase the test voltage to 1000 V and retest",
+            "Reconnect the lamps and retest"
+          ],
+          "answer": 1,
+          "explain": "BS 7671 requires a minimum of 1 MΩ for a 500 V test on a 230 V circuit. 0.02 MΩ means damaged insulation or moisture ingress."
+        },
+        {
+          "id": "ff3",
+          "type": "truefalse",
+          "text": "A low Zs reading is generally a good result on an earth fault loop impedance test.",
+          "time": 20,
+          "answer": true,
+          "explain": "Lower Zs means more fault current, so the protective device operates faster. It must be below the maximum tabulated value for the device."
+        }
+      ]
+    }
+  ]
+}

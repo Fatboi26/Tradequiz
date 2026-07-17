@@ -1,0 +1,18 @@
+{
+  "name": "TradeQuest",
+  "short_name": "TradeQuest",
+  "description": "Interactive construction and trades learning platform.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0E1826",
+  "theme_color": "#00857D",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

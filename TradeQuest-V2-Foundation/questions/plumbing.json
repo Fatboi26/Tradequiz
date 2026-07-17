@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "id": "plumbing",
+    "name": "Plumbing",
+    "icon": "🪠",
+    "color": "#00857D",
+    "description": "Hand tools, pipework, fittings, hot & cold systems and Water Regs."
+  },
+  "topics": [
+    {
+      "id": "tools",
+      "name": "Tools & Equipment"
+    },
+    {
+      "id": "materials",
+      "name": "Materials & Fittings"
+    },
+    {
+      "id": "systems",
+      "name": "Hot & Cold Systems"
+    },
+    {
+      "id": "regs",
+      "name": "Regulations & Standards"
+    },
+    {
+      "id": "calcs",
+      "name": "Calculations"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "plu-tools-01",
+      "title": "Hand Tool Identification",
+      "topic": "tools",
+      "level": "Level 1",
+      "description": "Name the tool and know when to reach for it.",
+      "tags": [
+        "tool-identification",
+        "hand-tool-recognition"
+      ],
+      "schedule": {
+        "publishAt": null,
+        "expiresAt": null
+      },
+      "questions": [
+        {
+          "id": "p1",
+          "type": "mcq",
+          "text": "Which tool is designed specifically for gripping and turning round pipework?",
+          "time": 20,
+          "options": [
+            "Stilson (pipe wrench)",
+            "Combination pliers",
+            "Ring spanner",
+            "Mole grips"
+          ],
+          "answer": 0,
+          "explain": "A Stilson has hardened, angled jaws that bite harder as force increases — ideal on round steel pipe. It will chew up chrome or brass fittings, so use an adjustable spanner on those."
+        },
+        {
+          "id": "p2",
+          "type": "mcq",
+          "text": "You need to undo a tap back-nut in the confined space behind a basin. What do you use?",
+          "time": 20,
+          "options": [
+            "Basin wrench (crowsfoot)",
+            "Bolster chisel",
+            "Torque wrench",
+            "Pipe slice"
+          ],
+          "answer": 0,
+          "explain": "A basin wrench has a long shaft and a swivelling head so it reaches up behind the bowl where no spanner will fit."
+        },
+        {
+          "id": "p3",
+          "type": "truefalse",
+          "text": "A pipe slice can be used on copper pipe already fixed close to a wall.",
+          "time": 15,
+          "answer": true,
+          "explain": "A pipe slice only needs a small rotation clearance, which is why it beats a rotary cutter in tight spots."
+        },
+        {
+          "id": "p4",
+          "type": "multi",
+          "text": "Select ALL tools you would need to make a soldered capillary joint on 15 mm copper.",
+          "time": 30,
+          "options": [
+            "Blowtorch",
+            "Flux brush",
+            "Wire wool / abrasive strip",
+            "Wire strippers",
+            "Solder",
+            "Multimeter"
+          ],
+          "answer": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "explain": "Wire strippers and a multimeter are electrical tools — no place on a capillary joint."
+        },
+        {
+          "id": "p5",
+          "type": "order",
+          "text": "Put the steps for making an end-feed soldered joint into the correct order.",
+          "time": 45,
+          "items": [
+            "Cut the pipe square and remove the burr",
+            "Clean the pipe end and fitting socket",
+            "Apply flux to the cleaned surfaces",
+            "Assemble the joint fully home",
+            "Heat the joint evenly until the flux sizzles",
+            "Feed solder to the mouth until a ring forms",
+            "Allow to cool undisturbed, then wipe off flux residue"
+          ],
+          "explain": "Cut → clean → flux → assemble → heat → feed → cool. Cleaning after fluxing, or moving the joint while it cools, are the two classic fails."
+        },
+        {
+          "id": "p6",
+          "type": "scenario",
+          "scenario": "You arrive at a customer's house to change a leaking radiator valve. The system is a sealed pressurised system at 1.5 bar. You isolate the valve and start to undo the union nut. Water starts to run out steadily and does not stop.",
+          "text": "What is the most likely cause?",
+          "time": 40,
+          "options": [
+            "The lockshield valve on the other end has not been closed",
+            "The system pressure is too high",
+            "The radiator needs bleeding",
+            "The pump is running"
+          ],
+          "answer": 0,
+          "explain": "Both ends must be isolated. Closing only the wheelhead valve leaves the radiator fed from the return through the open lockshield."
+        }
+      ]
+    },
+    {
+      "id": "plu-fittings-01",
+      "title": "Fittings & Pipework Systems",
+      "topic": "materials",
+      "level": "Level 2",
+      "description": "Identify fittings from a drawing and match them to their job.",
+      "tags": [
+        "material-identification",
+        "pipework-systems",
+        "image-hotspot"
+      ],
+      "schedule": {
+        "publishAt": null,
+        "expiresAt": null
+      },
+      "questions": [
+        {
+          "id": "f1",
+          "type": "image",
+          "text": "Which labelled fitting is an equal tee?",
+          "image": "images/q/pipe-fittings.svg",
+          "imageAlt": "Four copper fittings labelled A to D: an elbow, a tee, a coupler and a reducer",
+          "time": 20,
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "answer": 1,
+          "explain": "B has three ports of the same size — an equal tee. A is a 90° elbow, C a straight coupler, D a reducer."
+        },
+        {
+          "id": "f2",
+          "type": "hotspot",
+          "text": "Click the reducing fitting on the drawing.",
+          "image": "images/q/pipe-fittings.svg",
+          "imageAlt": "Four copper fittings labelled A to D",
+          "time": 25,
+          "areas": [
+            {
+              "shape": "rect",
+              "x": 10,
+              "y": 62,
+              "w": 30,
+              "h": 28
+            }
+          ],
+          "explain": "The reducer (D) changes from a larger bore to a smaller one in a single fitting."
+        },
+        {
+          "id": "f3",
+          "type": "match",
+          "text": "Match each pipe material to its most common use.",
+          "time": 45,
+          "pairs": [
+            {
+              "left": "Copper (BS EN 1057)",
+              "right": "Hot & cold water and heating pipework"
+            },
+            {
+              "left": "MDPE (blue)",
+              "right": "Underground cold water service pipe"
+            },
+            {
+              "left": "Cast iron",
+              "right": "Above-ground soil stacks in older buildings"
+            },
+            {
+              "left": "PEX / PB",
+              "right": "Flexible push-fit hot & cold within a building"
+            }
+          ],
+          "explain": "Blue MDPE is the giveaway for buried potable water. Black MDPE is not approved for drinking water."
+        },
+        {
+          "id": "f4",
+          "type": "mcq",
+          "text": "What is the minimum depth for a buried MDPE cold water service pipe under normal ground?",
+          "time": 25,
+          "options": [
+            "300 mm",
+            "450 mm",
+            "750 mm",
+            "1350 mm"
+          ],
+          "answer": 2,
+          "explain": "750 mm minimum and 1350 mm maximum — deep enough to stay clear of frost, shallow enough to dig out."
+        },
+        {
+          "id": "f5",
+          "type": "dragdrop",
+          "text": "Drag each component into the correct part of an unvented hot water system.",
+          "time": 60,
+          "targets": [
+            {
+              "id": "t1",
+              "label": "Controls the incoming supply pressure",
+              "accepts": "i1"
+            },
+            {
+              "id": "t2",
+              "label": "Absorbs expansion of heated water",
+              "accepts": "i2"
+            },
+            {
+              "id": "t3",
+              "label": "Second line of defence on over-temperature",
+              "accepts": "i3"
+            },
+            {
+              "id": "t4",
+              "label": "Prevents backflow into the mains",
+              "accepts": "i4"
+            }
+          ],
+          "items": [
+            {
+              "id": "i1",
+              "label": "Pressure reducing valve"
+            },
+            {
+              "id": "i2",
+              "label": "Expansion vessel"
+            },
+            {
+              "id": "i3",
+              "label": "Temperature & pressure relief valve"
+            },
+            {
+              "id": "i4",
+              "label": "Check valve"
+            }
+          ],
+          "explain": "An unvented cylinder needs a working expansion device plus two independent safety devices (thermal cut-out and T&P relief)."
+        },
+        {
+          "id": "f6",
+          "type": "numeric",
+          "text": "A cylinder holds 210 litres. Raising it from 10 °C to 60 °C needs 4.2 kJ per litre per °C. How much energy is required, in megajoules (MJ)?",
+          "time": 60,
+          "answer": 44.1,
+          "tolerance": 0.5,
+          "unit": "MJ",
+          "bonus": true,
+          "explain": "210 × 4.2 × 50 = 44 100 kJ = 44.1 MJ."
+        }
+      ]
+    },
+    {
+      "id": "plu-regs-01",
+      "title": "Water Regulations Essentials",
+      "topic": "regs",
+      "level": "Level 2",
+      "description": "Fluid categories, backflow and the rules that keep water wholesome.",
+      "tags": [
+        "building-regulations",
+        "british-standards"
+      ],
+      "schedule": {
+        "publishAt": null,
+        "expiresAt": null
+      },
+      "questions": [
+        {
+          "id": "r1",
+          "type": "mcq",
+          "text": "Under the Water Supply (Water Fittings) Regulations 1999, what fluid category is water in a domestic WC cistern?",
+          "time": 25,
+          "options": [
+            "Fluid category 2",
+            "Fluid category 3",
+            "Fluid category 4",
+            "Fluid category 5"
+          ],
+          "answer": 3,
+          "explain": "A WC is fluid category 5 — the highest risk — because of faecal contamination. It requires a Type AG air gap."
+        },
+        {
+          "id": "r2",
+          "type": "truefalse",
+          "text": "A single check valve is acceptable backflow protection against fluid category 3.",
+          "time": 20,
+          "answer": false,
+          "explain": "Category 3 needs a double check valve. A single check valve only protects to category 2."
+        },
+        {
+          "id": "r3",
+          "type": "mcq",
+          "text": "Which standard covers the design and installation of copper tube for water services?",
+          "time": 20,
+          "options": [
+            "BS 7671",
+            "BS EN 1057",
+            "BS 5950",
+            "BS 8000"
+          ],
+          "answer": 1,
+          "explain": "BS EN 1057 is copper tube. BS 7671 is the Wiring Regulations — a favourite distractor."
+        },
+        {
+          "id": "r4",
+          "type": "mcq",
+          "text": "Maximum permitted temperature at a bath tap outlet to comply with Building Regulations Part G?",
+          "time": 25,
+          "options": [
+            "38 °C",
+            "43 °C",
+            "48 °C",
+            "60 °C"
+          ],
+          "answer": 2,
+          "explain": "Building Regulations Part G3 requires that hot water delivered to a bath does not exceed 48 °C, achieved with an in-line thermostatic mixing valve (TMV2/TMV3)."
+        }
+      ]
+    }
+  ]
+}

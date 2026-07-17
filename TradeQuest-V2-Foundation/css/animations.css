@@ -1,0 +1,191 @@
+/* ============================================================================
+   animations.css — keyframes, page transitions, celebrations
+   Every animation here degrades to nothing under reduced motion (tokens.css).
+   ========================================================================== */
+
+/* ------------------------------------------------------- page transitions -- */
+.screen { display: none; }
+.screen.is-active { display: block; animation: screen-in var(--dur-slow) var(--ease) both; }
+
+@keyframes screen-in {
+  from { opacity: 0; transform: translateY(14px) scale(.995); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Stagger children on entry. Set --i on each child in JS or CSS. */
+.stagger > * { animation: rise-in 420ms var(--ease-back) both; animation-delay: calc(var(--i, 0) * 60ms); }
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* -------------------------------------------------------------- loading ---- */
+/* A rotating pipe-wrench loader beats a generic spinner and stays on-theme. */
+.loader { display: grid; place-items: center; gap: var(--s-3); padding: var(--s-7); }
+.loader__spin {
+  width: 46px; height: 46px;
+  border: 5px solid color-mix(in srgb, var(--c-text) 16%, transparent);
+  border-top-color: var(--c-gold);
+  border-radius: 50%;
+  animation: spin 900ms linear infinite;
+}
+.loader__text { color: var(--c-text-muted); font-size: var(--fs-sm); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.skeleton {
+  border-radius: var(--r-md);
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--c-surface-alt) 80%, transparent) 25%,
+    color-mix(in srgb, var(--c-text) 10%, transparent) 37%,
+    color-mix(in srgb, var(--c-surface-alt) 80%, transparent) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  min-height: 20px;
+}
+@keyframes shimmer { from { background-position: 100% 0; } to { background-position: 0 0; } }
+
+/* --------------------------------------------------------- answer result --- */
+@keyframes pop-correct {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.06); }
+  70%  { transform: scale(.98); }
+  100% { transform: scale(1); }
+}
+.tile.is-correct { animation: pop-correct 520ms var(--ease-back); }
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-7px); }
+  40%, 60% { transform: translateX(7px); }
+}
+.tile.is-wrong { animation: shake 460ms var(--ease); }
+
+/* Big centred verdict stamp after each question */
+.verdict {
+  position: fixed; inset: 0; z-index: 150;
+  display: grid; place-items: center;
+  pointer-events: none;
+}
+.verdict__stamp {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  padding: var(--s-4) var(--s-6);
+  border-radius: var(--r-shield);
+  border: 5px solid currentColor;
+  background: color-mix(in srgb, var(--c-bg) 82%, transparent);
+  animation: stamp 620ms var(--ease-back) both;
+}
+.verdict--correct .verdict__stamp { color: var(--c-success); }
+.verdict--wrong .verdict__stamp   { color: var(--c-danger); }
+@keyframes stamp {
+  0%   { opacity: 0; transform: scale(2.2) rotate(-9deg); }
+  55%  { opacity: 1; transform: scale(.94) rotate(-3deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-3deg); }
+}
+
+/* ------------------------------------------------------------- XP float ---- */
+.xp-float {
+  position: fixed; z-index: 160;
+  font-family: var(--font-heading);
+  font-weight: 800; font-size: var(--fs-lg);
+  color: var(--c-gold);
+  text-shadow: 0 2px 8px rgba(0,0,0,.7);
+  pointer-events: none;
+  animation: xp-rise 1100ms var(--ease) both;
+}
+@keyframes xp-rise {
+  0%   { opacity: 0; transform: translate(-50%, 0) scale(.6); }
+  25%  { opacity: 1; transform: translate(-50%, -22px) scale(1.15); }
+  100% { opacity: 0; transform: translate(-50%, -92px) scale(1); }
+}
+
+/* -------------------------------------------------------- badge unlock ----- */
+/* Deliberately Minecraft-ish: a slab that slides in from the corner. */
+.badge-pop {
+  position: fixed; top: var(--s-5); left: 50%; z-index: 210;
+  display: flex; align-items: center; gap: var(--s-4);
+  padding: var(--s-4) var(--s-5);
+  border-radius: var(--r-shield);
+  background: linear-gradient(135deg, #24324e, #16233a);
+  border: 3px solid var(--c-gold);
+  box-shadow: var(--shadow-lg), 0 0 40px color-mix(in srgb, var(--c-gold) 45%, transparent);
+  animation: badge-slam 3600ms var(--ease) both;
+}
+.badge-pop__icon {
+  font-size: 2.6rem;
+  animation: badge-spin 900ms var(--ease-back) both;
+}
+.badge-pop__eyebrow { font-size: var(--fs-xs); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--c-gold); font-weight: 800; }
+.badge-pop__name { font-family: var(--font-heading); font-weight: 800; font-size: var(--fs-md); }
+@keyframes badge-slam {
+  0%   { opacity: 0; transform: translate(-50%, -140%) scale(.8); }
+  9%   { opacity: 1; transform: translate(-50%, 8px) scale(1.04); }
+  14%  { transform: translate(-50%, 0) scale(1); }
+  88%  { opacity: 1; transform: translate(-50%, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -140%) scale(.9); }
+}
+@keyframes badge-spin {
+  from { transform: rotateY(-540deg) scale(.2); }
+  to   { transform: none; }
+}
+
+/* --------------------------------------------------------- level up -------- */
+.levelup__ring {
+  position: absolute; inset: -8px;
+  border-radius: 50%;
+  border: 3px solid var(--c-gold);
+  animation: ring-burst 900ms var(--ease) both;
+  pointer-events: none;
+}
+@keyframes ring-burst {
+  from { opacity: .9; transform: scale(.6); }
+  to   { opacity: 0; transform: scale(2.1); }
+}
+
+/* --------------------------------------------------------- confetti -------- */
+.confetti-layer { position: fixed; inset: 0; z-index: 140; pointer-events: none; overflow: hidden; }
+.confetti-bit {
+  position: absolute; top: -14px;
+  width: 10px; height: 14px;
+  border-radius: 2px;
+  will-change: transform, opacity;
+  animation: confetti-fall var(--fall, 2400ms) linear var(--delay, 0ms) both;
+}
+@keyframes confetti-fall {
+  0%   { opacity: 1; transform: translate3d(0, -10vh, 0) rotate(0deg); }
+  100% { opacity: .1; transform: translate3d(var(--drift, 40px), 108vh, 0) rotate(var(--spin, 720deg)); }
+}
+
+/* ---------------------------------------------------------- timer ring ----- */
+.timer {
+  position: relative;
+  width: 62px; height: 62px;
+  display: grid; place-items: center;
+  flex: none;
+}
+.timer__svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+.timer__track { fill: none; stroke: color-mix(in srgb, var(--c-text) 14%, transparent); stroke-width: 7; }
+.timer__bar {
+  fill: none; stroke: var(--c-success); stroke-width: 7; stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear, stroke 400ms var(--ease);
+}
+.timer.is-warning .timer__bar { stroke: var(--c-warning); }
+.timer.is-danger  .timer__bar { stroke: var(--c-danger); }
+.timer.is-danger  { animation: pulse 700ms ease-in-out infinite; }
+.timer__num { font-family: var(--font-heading); font-weight: 800; font-size: var(--fs-md); font-variant-numeric: tabular-nums; }
+@keyframes pulse { 50% { transform: scale(1.09); } }
+
+/* ---------------------------------------------------------- streak fire ---- */
+.streak-flame { display: inline-block; animation: flicker 1.5s ease-in-out infinite; }
+@keyframes flicker {
+  0%, 100% { transform: scale(1) rotate(-2deg); }
+  50%      { transform: scale(1.16) rotate(3deg); }
+}
+
+/* ------------------------------------------------------- count-up number --- */
+.count-up { font-variant-numeric: tabular-nums; display: inline-block; }
+.count-up.is-ticking { animation: tick 180ms var(--ease); }
+@keyframes tick { 50% { transform: scale(1.14); color: var(--c-gold); } }

@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "avatars": [
+    {
+      "id": "orbit-sergeant",
+      "name": "Orbit Sergeant",
+      "archetype": "Futuristic space soldier",
+      "file": "avatars/orbit-sergeant.svg",
+      "tool": "adjustable spanner",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "relic-runner",
+      "name": "Relic Runner",
+      "archetype": "Agile treasure hunter",
+      "file": "avatars/relic-runner.svg",
+      "tool": "tape measure",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "pipe-maestro",
+      "name": "Pipe Maestro",
+      "archetype": "Italian-style tradesman",
+      "file": "avatars/pipe-maestro.svg",
+      "tool": "pipe wrench",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "oak-warden",
+      "name": "Oak Warden",
+      "archetype": "Fantasy warrior",
+      "file": "avatars/oak-warden.svg",
+      "tool": "framing hammer",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "neon-shadow",
+      "name": "Neon Shadow",
+      "archetype": "Cyber ninja",
+      "file": "avatars/neon-shadow.svg",
+      "tool": "side cutters",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "dust-drifter",
+      "name": "Dust Drifter",
+      "archetype": "Post-apocalyptic survivor",
+      "file": "avatars/dust-drifter.svg",
+      "tool": "blowtorch",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "quiet-fox",
+      "name": "Quiet Fox",
+      "archetype": "Stealth operative",
+      "file": "avatars/quiet-fox.svg",
+      "tool": "voltage tester",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "north-shield",
+      "name": "North Shield",
+      "archetype": "Viking hero",
+      "file": "avatars/north-shield.svg",
+      "tool": "hand saw",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "bolt-unit-7",
+      "name": "Bolt Unit 7",
+      "archetype": "Robot engineer",
+      "file": "avatars/bolt-unit-7.svg",
+      "tool": "multimeter",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "scout-pip",
+      "name": "Scout Pip",
+      "archetype": "Cartoon adventurer",
+      "file": "avatars/scout-pip.svg",
+      "tool": "drill driver",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "salty-crank",
+      "name": "Salty Crank",
+      "archetype": "Pirate captain",
+      "file": "avatars/salty-crank.svg",
+      "tool": "pipe cutter",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "iron-vow",
+      "name": "Iron Vow",
+      "archetype": "Medieval knight",
+      "file": "avatars/iron-vow.svg",
+      "tool": "chisel",
+      "unlock": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "copper-comet",
+      "name": "Copper Comet",
+      "archetype": "Plumbing specialist",
+      "file": "avatars/copper-comet.svg",
+      "tool": "copper pipe",
+      "unlock": {
+        "type": "badge",
+        "id": "plumbing-apprentice"
+      }
+    },
+    {
+      "id": "flux-knight",
+      "name": "Flux Knight",
+      "archetype": "Press-fit pioneer",
+      "file": "avatars/flux-knight.svg",
+      "tool": "press tool",
+      "unlock": {
+        "type": "level",
+        "value": 5
+      }
+    },
+    {
+      "id": "bend-baron",
+      "name": "Bend Baron",
+      "archetype": "Pipework shaper",
+      "file": "avatars/bend-baron.svg",
+      "tool": "pipe bender",
+      "unlock": {
+        "type": "xp",
+        "value": 2000
+      }
+    },
+    {
+      "id": "true-level",
+      "name": "True Level",
+      "archetype": "Precision setter",
+      "file": "avatars/true-level.svg",
+      "tool": "spirit level",
+      "unlock": {
+        "type": "streak",
+        "value": 10
+      }
+    },
+    {
+      "id": "arc-warden",
+      "name": "Arc Warden",
+      "archetype": "Electrical improver",
+      "file": "avatars/arc-warden.svg",
+      "tool": "insulated screwdriver",
+      "unlock": {
+        "type": "badge",
+        "id": "electrical-improver"
+      }
+    },
+    {
+      "id": "live-wire",
+      "name": "Live Wire",
+      "archetype": "Cable specialist",
+      "file": "avatars/live-wire.svg",
+      "tool": "wire strippers",
+      "unlock": {
+        "type": "level",
+        "value": 8
+      }
+    },
+    {
+      "id": "crimp-captain",
+      "name": "Crimp Captain",
+      "archetype": "Terminations expert",
+      "file": "avatars/crimp-captain.svg",
+      "tool": "crimping tool",
+      "unlock": {
+        "type": "xp",
+        "value": 5000
+      }
+    },
+    {
+      "id": "conduit-king",
+      "name": "Conduit King",
+      "archetype": "Containment master",
+      "file": "avatars/conduit-king.svg",
+      "tool": "conduit bender",
+      "unlock": {
+        "type": "badge",
+        "id": "construction-operative"
+      }
+    },
+    {
+      "id": "saw-sage",
+      "name": "Saw Sage",
+      "archetype": "Carpentry craftsperson",
+      "file": "avatars/saw-sage.svg",
+      "tool": "circular saw",
+      "unlock": {
+        "type": "badge",
+        "id": "carpentry-craftsperson"
+      }
+    },
+    {
+      "id": "nail-nova",
+      "name": "Nail Nova",
+      "archetype": "First-fix flyer",
+      "file": "avatars/nail-nova.svg",
+      "tool": "nail gun",
+      "unlock": {
+        "type": "level",
+        "value": 12
+      }
+    },
+    {
+      "id": "hazard-hawk",
+      "name": "Hazard Hawk",
+      "archetype": "H&S champion",
+      "file": "avatars/hazard-hawk.svg",
+      "tool": "combination square",
+      "unlock": {
+        "type": "badge",
+        "id": "health-safety-champion"
+      }
+    },
+    {
+      "id": "grand-gaffer",
+      "name": "Grand Gaffer",
+      "archetype": "Master tradesperson",
+      "file": "avatars/grand-gaffer.svg",
+      "tool": "plunger",
+      "unlock": {
+        "type": "badge",
+        "id": "master-tradesperson"
+      }
+    }
+  ]
+}
